@@ -7,25 +7,25 @@
 </template>
 
 <script>
-console.log('from line 10 in App.js')
+console.log("from line 10 in App.js")
 export default {
   data() {
     return {
-      message: 'Hello Universe',
+      message: "Hello Universe"
     }
   },
   created() {
     console.log(this.$style.app)
-  },
+  }
 }
 </script>
 
-<style src="ress/ress.css"></style>
+<style src="ress/ress.css" />
 
 <style lang="scss" module>
 .app {
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: blue;
 }
 </style>

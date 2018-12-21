@@ -12,6 +12,16 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: "pre",
+        test: /\.(js|vue)$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+        // options: {
+        //   formatter: require("eslint-friendly-formatter"),
+        //   emitWarning: !config.dev.showEslintErrorsInOverlay
+        // }
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: "babel-loader"
@@ -21,7 +31,7 @@ module.exports = {
         use: "vue-loader"
       },
       {
-        test: /\.css$|\.scss$/,
+        test: /\.(css|scss)$/,
         use: [
           {
             loader: "vue-style-loader",
